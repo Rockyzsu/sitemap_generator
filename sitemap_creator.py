@@ -1,5 +1,7 @@
 # 接收url 转为sitemap.xml
 
+import  datetime
+
 
 TEMPLATE='''
 <url>
@@ -15,6 +17,7 @@ class SiteMap():
         self.site_map_header_end = '</urlset>'
         self.data = url_list
         self.site_map_str = ''
+        self.current = datetime.datetime.now().strftime('%Y-%m-%d')
 
     def gen(self):
         self.site_map_str+=self.site_map_header
@@ -30,7 +33,8 @@ class SiteMap():
 
 
     def node(self,url):
-        ts='2022-05-23T08:23:55+00:00'
+        
+        ts='{}T00:20:55+00:00'.format(self.current)
         freq='daily'
         priority='0.7'
         each_node = TEMPLATE.format(url,ts,freq,priority)
