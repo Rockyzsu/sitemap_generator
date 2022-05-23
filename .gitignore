@@ -46,3 +46,4 @@ autojs/.vscode/launch.json
 node_project/spider/.vscode/launch.json
 .vscode/
 config.json
+*.xml

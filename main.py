@@ -1,9 +1,13 @@
 
 from url_source import DataSource
+from sitemap_creator import SiteMap
+
 
 def main():
-    app = DataSource()
-    app.urls()
+    url = DataSource()
+    _url=url.run()
+    sitemap = SiteMap(_url)
+    sitemap.gen()
 
 
 if __name__=='__main__':
