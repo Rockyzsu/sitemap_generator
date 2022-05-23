@@ -75,23 +75,3 @@ class DBSelector(object):
             client = pymongo.MongoClient(connect_uri)
         return client
 
-
-def get_tushare_pro():
-    import xcsc_tushare as xc
-    xc_token_pro = config.get('xc_token_pro')
-    xc_server = config.get('xc_server')
-    xc.set_token(xc_token_pro)
-    pro = xc.pro_api(env='prd', server=xc_server)
-    return pro
-
-
-if __name__ == '__main__':
-    # msg=WechatSend(u'wei')
-    # msg.send_price('hsdq',12,12,'sell')
-    # print(FROM_MAIL)
-    # mylogger('test.log','just for test')
-    # trading_time()
-    # sendmail('content--------', 'subject------')
-    # send_aliyun('你是这样的的', '二维翁', 'weigesysu@qq.com')
-    # is_holiday()
-    pass
