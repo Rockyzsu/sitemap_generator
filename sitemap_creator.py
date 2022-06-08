@@ -2,37 +2,6 @@
 
 import  datetime
 
-NEW_TEMPLATE='''
-<url> 
-<loc>http://m.example.com/index.html</loc> 
-<mobile:mobile type="mobile"/>
-<lastmod>2009-12-14</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url> 
-<url> 
-<loc>http://www.example.com/index.html</loc>
-<lastmod>2009-12-14</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url> 
-<url> 
-<loc>http://www.example.com/autoadapt.html</loc> 
-<mobile:mobile type="pc,mobile"/>
-<lastmod>2009-12-14</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url> 
-<url> 
-<loc>http://www.example.com/htmladapt.html</loc> 
-<mobile:mobile type="htmladapt"/>
-<lastmod>2009-12-14</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url> 
-</urlset>
-'''
-
 TEMPLATE_PC='''
 <url>
 <loc>{}</loc>
@@ -55,8 +24,7 @@ class SiteMap():
     def __init__(self,url_list):
         # self.site_map_header='<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">'
         self.site_map_header='''<?xml version="1.0" encoding="UTF-8" ?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">'''
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">'''
         self.site_map_header_end = '</urlset>'
         self.data = url_list
         self.site_map_str = ''
