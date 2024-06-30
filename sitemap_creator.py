@@ -50,6 +50,7 @@ class SiteMap():
         priority='0.7'
         each_node_pc = TEMPLATE_PC.format(url,ts,freq,priority)
         url=url.replace('www.30daydo.com/','www.30daydo.com/m/')
+        url=url.replace('30daydo.com/','30daydo.com/m/')
         each_node_mobile = TEMPLATE_MOBILE.format(url,ts,freq,priority)
 
         return each_node_pc+each_node_mobile

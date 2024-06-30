@@ -8,7 +8,6 @@ node_modules/
 *.xls
 *.xml
 *.csv
-*.pkl
 *.jpg
 *.png
 *.flv
@@ -45,5 +44,4 @@ NLP/souhu.h5
 autojs/.vscode/launch.json
 node_project/spider/.vscode/launch.json
 .vscode/
-config.json
 *.xml
