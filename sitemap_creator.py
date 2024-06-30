@@ -45,7 +45,7 @@ class SiteMap():
 
     def node(self,url):
         
-        ts='{}T00:20:55+00:00'.format(self.current)
+        ts=self.current
         freq='daily'
         priority='0.7'
         each_node_pc = TEMPLATE_PC.format(url,ts,freq,priority)
